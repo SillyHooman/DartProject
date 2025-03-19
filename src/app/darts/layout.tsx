@@ -3,6 +3,7 @@
 import React from 'react';
 import { GameProvider } from './contexts/GameContext';
 import { ThemeProvider } from './contexts/ThemeContext';
+import ThemeScript from './components/ThemeScript';
 
 export default function DartsLayout({
   children,
@@ -11,6 +12,7 @@ export default function DartsLayout({
 }) {
   return (
     <ThemeProvider>
+      <ThemeScript />
       <GameProvider>
         {children}
       </GameProvider>

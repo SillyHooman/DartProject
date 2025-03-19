@@ -1,25 +1,29 @@
-# 2Bro's Darts 🎯
+# Darts Game Application
 
-A modern web application for tracking darts games, built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern web-based darts scoring application built with Next.js 14, TypeScript, and Tailwind CSS. The application supports two classic darts games: Countdown (formerly X01) and Cricket.
 
 ## Features
 
-- 🎯 Virtual dartboard interface
-- 👥 Multi-player support
-- 📊 Real-time score tracking
-- 🎮 Three-throw round system
-- ⚡ Automatic player turn switching
-- 🚫 Bust detection
-- 📱 Responsive design for all devices
+### Countdown Game
+- Multiple starting score options (401, 501, 601, 701, 1001)
+- Real-time score tracking
+- Support for singles, doubles, and triples
+- Automatic turn management
+- Winner detection when reaching exactly zero
 
-## Game Rules
+### Cricket Game
+- Track hits on numbers 15-20 and bullseye
+- Support for singles, doubles, and triples
+- Visual progress tracking for each number
+- Dedicated buttons for claiming doubles and triples
+- Automatic game completion when all numbers are closed
 
-The application supports standard 501 darts rules:
-- Players start with 501 points
-- Each player gets three throws per turn
-- Players must reach exactly 0 to win
-- Going below 0 results in a "bust" and the player's score remains unchanged
-- Players take turns throwing three darts each
+### General Features
+- Dark mode support
+- Responsive design
+- Real-time game state management
+- Player management system
+- Clean and intuitive UI
 
 ## Tech Stack
 
@@ -33,17 +37,22 @@ The application supports standard 501 darts rules:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Sillyhooman/DartProject.git
+git clone https://github.com/yourusername/darts-game.git
+cd darts-game
 ```
 
 2. Install dependencies:
 ```bash
 npm install
+# or
+yarn install
 ```
 
 3. Run the development server:
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -57,10 +66,10 @@ src/
 │   │   ├── components/     # React components
 │   │   ├── contexts/      # Game state management
 │   │   ├── types/         # TypeScript type definitions
-│   │   ├── page.tsx       # Main game page
-│   │   └── layout.tsx     # Game layout
-│   └── api/              # API routes
-└── lib/                  # Utility functions and configurations
+│   │   ├── game/          # Game page
+│   │   └── page.tsx       # Home page
+│   └── layout.tsx         # Root layout
+└── ...
 ```
 
 ## Contributing
