@@ -1,15 +1,78 @@
-# Ansh & Riley Full-Stack Template
+# 2Bro's Darts 🎯
 
-This is a full-stack template project for Software Composers to create  applications with AI.
+A modern web application for tracking darts games, built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Getting started
-To create a new project, you go to `/paths`, choose from our list of Paths, and then use Cursor's Composer feature to quickly scaffold your project!
+## Features
 
-You can also edit the Path's prompt template to be whatever you like!
+- 🎯 Virtual dartboard interface
+- 👥 Multi-player support
+- 📊 Real-time score tracking
+- 🎮 Three-throw round system
+- ⚡ Automatic player turn switching
+- 🚫 Bust detection
+- 📱 Responsive design for all devices
 
-## Technologies used
-This doesn't really matter, but is useful for the AI to understand more about this project. We are using the following technologies
-- React with Next.js 14 App Router
-- TailwindCSS
-- Firebase Auth, Storage, and Database
-- Multiple AI endpoints including OpenAI, Anthropic, and Replicate using Vercel's AI SDK
+## Game Rules
+
+The application supports standard 501 darts rules:
+- Players start with 501 points
+- Each player gets three throws per turn
+- Players must reach exactly 0 to win
+- Going below 0 results in a "bust" and the player's score remains unchanged
+- Players take turns throwing three darts each
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API
+- **Deployment**: Vercel (recommended)
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Sillyhooman/DartProject.git
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── darts/
+│   │   ├── components/     # React components
+│   │   ├── contexts/      # Game state management
+│   │   ├── types/         # TypeScript type definitions
+│   │   ├── page.tsx       # Main game page
+│   │   └── layout.tsx     # Game layout
+│   └── api/              # API routes
+└── lib/                  # Utility functions and configurations
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Built with Next.js and Tailwind CSS
+- Inspired by traditional darts scoring systems
+- Created by Sillyhooman 
